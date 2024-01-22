@@ -1,0 +1,18 @@
+## kafka ##
+spring:
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092
+    listener:
+      missing-topics-fatal: false
+    topic: test
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      group-id: test
+      enable-auto-commit: true
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+server:
+  port: 8001
